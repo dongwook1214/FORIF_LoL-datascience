@@ -32,7 +32,7 @@ Riot Watcher (1) : Data Dragon
 ###### static_champ_list = watcher.data_dragon.champions(latest, False, 'ko_KR')
 ###### static_champ_data = static_champ_list['data']
 
-##### &uparrow;latest 는 최신 버전을 알려주고 static_champ_data는 챔피언 데이터를 알려주는데 static_champ_data['zoe']이런 식으로 입력하면 조이의 데이터만 읽을수있다.
+#### &uparrow;latest 는 최신 버전을 알려주고 static_champ_data는 챔피언 데이터를 알려주는데 static_champ_data['zoe']이런 식으로 입력하면 조이의 데이터만 읽을수있다.
 </br>
 </br>
 </br>
@@ -44,7 +44,7 @@ What is Pandas?
 
 pandas
 -------
-##### code &downarrow;&downarrow;
+#### code &downarrow;&downarrow;
 ###### static_champ_data = static_champ_list['data']
 ###### champ_list = static_champ_data.keys()
 ###### champ_data = []
@@ -81,21 +81,21 @@ pandas
 </br>
 
 ###### champ_data.head()
-##### &uparrow; 챔피언 데이터에서 위에 몇개만 보여줌
+#### &uparrow; 챔피언 데이터에서 위에 몇개만 보여줌
 ###### champ_data.shape
-##### &uparrow; (159, 27)반환 함 행,열 순서로 반환
+#### &uparrow; (159, 27)반환 함 행,열 순서로 반환
 ###### champ_data.values
-##### &uparrow; 판다스로 안 보여주고 그냥 알려줌
+#### &uparrow; 판다스로 안 보여주고 그냥 알려줌
 ###### champ_data.columns
-##### &uparrow; 열을 보여줌 ex)hp,mp,...
+#### &uparrow; 열을 보여줌 ex)hp,mp,...
 ###### champ_data.index
-##### &uparrow; 챔피언 이름 부분만 나옴
+#### &uparrow; 챔피언 이름 부분만 나옴
 
 </br>
 
 ###### champ_hp = champ_data.sort_values("hp", ascending=False)
-##### &uparrow; champ_data를 내림차순으로 정렬 ascending=True면 오름차순으로 정렬
+#### &uparrow; champ_data를 내림차순으로 정렬 ascending=True면 오름차순으로 정렬
 ###### champ_data.query("primary_class == 'Tank'")
-##### &uparrow; primary_class == 'Tank'인거만 출력해줌
+#### &uparrow; primary_class == 'Tank'인거만 출력해줌
 ###### champ_data.groupby("primary_class").mean()
-##### &uparrow; primary_class에 있는 종류인 Assassin,Fighter,Mage,Marksman,Support,Tank 이거를 행으로 해서 모든값을 평균내서 출력 평균내는거는 .mean() 이거임
+#### &uparrow; primary_class에 있는 종류인 Assassin,Fighter,Mage,Marksman,Support,Tank 이거를 행으로 해서 모든값을 평균내서 출력 평균내는거는 .mean() 이거임
