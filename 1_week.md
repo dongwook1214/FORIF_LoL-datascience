@@ -5,9 +5,9 @@ RiotWatcher 설치
 ###### pip install riotwatcher 로설치 할수있다
 ###### colab에서는 !를 붙이면 할수있다
 ###### ex)!pip install riotwatcher
-#
-#
-#
+</br>
+</br>
+</br>
 Riot Watcher (1) : Data Dragon
 --------------------
 #### code &downarrow;&downarrow;
@@ -15,27 +15,25 @@ Riot Watcher (1) : Data Dragon
 ###### import pandas as pd
 ###### import matplotlib.pyplot as plt
 ###### from riotwatcher import LolWatcher
-#
+</br>
 ###### api_key = 'your api key'
 ###### watcher = LolWatcher(api_key)
-#
+</br>
 ###### versions = watcher.data_dragon.versions_for_region('kr')
 ###### champions_version = versions['n']['champion']
-#
+</br>
 ###### latest = watcher.data_dragon.versions_for_region('kr')['n']['champion']
 ###### static_champ_list = watcher.data_dragon.champions(latest, False, 'ko_KR')
 ###### static_champ_data = static_champ_list['data']
 
 ##### &uparrow;latest 는 최신 버전을 알려주고 static_champ_data는 챔피언 데이터를 알려주는데 static_champ_data['zoe']이런 식으로 입력하면 조이의 데이터만 읽을수있다.
-#
-#
-#
+</br>
+</br>
+</br>
 What is Pandas?
 -----------
 ##### pandas의 목적은 데이터를 분석하기 위해 필요한 data set을 만드는 것입니다. 이러한 과정을 ‘전처리(preprocessing)’라고 부르며, 가장 중요한 단계이기도 합니다.
-#
-#
-#
+</br></br></br>
 pandas
 -------
 ##### code &downarrow;&downarrow;
@@ -44,9 +42,9 @@ pandas
 ###### champ_data = []
 ###### champ_stat = list(static_champ_data['Aatrox']['stats'].keys())
 ###### info_key = list(static_champ_data['Aatrox']['info'].keys())
-#
+</br>
 ###### my_col = ['id'] + champ_stat
-#
+</br>
 ###### for champ in champ_list:
 ######   &nbsp;&nbsp;temp = []
 ######   &nbsp;&nbsp;temp.append(static_champ_data[champ]['id'])
@@ -58,15 +56,15 @@ pandas
 ######   &nbsp;&nbsp;else :
 ######   &nbsp;&nbsp;&nbsp;&nbsp;  temp.append(static_champ_data[champ]['tags'][0])
 ######   &nbsp;&nbsp;&nbsp;&nbsp;  temp.append(None)
-#
+</br>
 ######   for info in info_key:
 ######   &nbsp;&nbsp;  temp.append(static_champ_data[champ]['info'][info])
-#
+</br>
 ######   champ_data.append(temp)
-#
+</br>
 ###### my_col.extend(['primary_class', 'secondary_class', 'info_attack', 'nfo_defense', 'info_magic', 'info_difficulty'])
 ###### champ_data = pd.DataFrame(champ_data, index = champ_list, columns = my_col)
-#
+</br>
 ###### champ_data.head()
 ##### &uparrow; 챔피언 데이터에서 위에 몇개만 보여줌
 ###### champ_data.shape
@@ -78,7 +76,7 @@ pandas
 ###### champ_data.index
 ##### &uparrow; 챔피언 이름 부분만 나옴
 
-#
+</br>
 ###### champ_hp = champ_data.sort_values("hp", ascending=False)
 ##### &uparrow; champ_data를 내림차순으로 정렬 ascending=True면 오름차순으로 정렬
 ###### champ_data.query("primary_class == 'Tank'")
